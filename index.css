@@ -4,46 +4,39 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
   color: #121212;
-  line-height: 1.35;
-  padding: 16px;
+  line-height: 1.45;
+  padding: 30px;
 }
 
 .container {
   width: min(210mm, 100%);
-  height: calc(100vh - 32px);
+  min-height: 297mm;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 20mm;
   background-color: #ffffff;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
 }
 
 header {
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #222222;
 }
 
 header p {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .contact-links {
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .contact-links span {
@@ -53,30 +46,25 @@ header p {
 
 .section {
   background-color: #f4f4f4;
-  padding: 10px 16px;
-  margin-bottom: 28px;
-  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  border-radius: 12px;
 }
 
 h2 {
   color: #222222;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-  padding-bottom: 2px;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
   border-bottom: 2px solid #222222;
 }
 
-p,
-li {
-  font-size: 0.88rem;
-}
-
 ul {
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 li {
-  margin-bottom: 3px;
+  margin-bottom: 7px;
 }
 
 a {
@@ -89,12 +77,6 @@ a:hover {
 }
 
 @media print {
-  html,
-  body {
-    height: auto;
-    overflow: visible;
-  }
-
   body {
     background-color: white;
     padding: 0;
@@ -102,20 +84,9 @@ a:hover {
 
   .container {
     width: 210mm;
-    height: auto;
     min-height: 297mm;
+    margin: 0;
     padding: 20mm;
     box-shadow: none;
-    overflow: visible;
-  }
-
-  .section {
-    padding: 16px;
-    margin-bottom: 12px;
-  }
-
-  p,
-  li {
-    font-size: 1rem;
   }
 }
