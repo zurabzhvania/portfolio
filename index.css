@@ -6,57 +6,61 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #121212;
-  line-height: 1.45;
-  padding: 30px;
+  color: #1f2933;
+  background-color: #f3f4f6;
+  line-height: 1.6;
+  padding: 32px 20px;
 }
 
 .container {
-  width: min(210mm, 100%);
+  width: min(100%, 820px);
   min-height: 297mm;
   margin: 0 auto;
-  padding: 20mm;
+  padding: 56px 64px;
   background-color: #ffffff;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
 }
 
 header {
-  text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 header h1 {
+  color: #111827;
   font-size: 2.5rem;
-  color: #222222;
-}
-
-header p {
-  font-size: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
 }
 
 .contact-links {
-  margin-top: 8px;
+  margin-top: 10px;
+  font-size: 1rem;
 }
 
 .contact-links span {
   margin: 0 8px;
-  color: #555555;
+  color: #9ca3af;
 }
 
 .section {
-  background-color: #f4f4f4;
-  padding: 18px 22px;
-  margin-bottom: 14px;
-  border-radius: 12px;
+  padding: 24px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.section:last-child {
+  border-bottom: 1px solid #e5e7eb;
 }
 
 h2 {
-  color: #222222;
-  font-size: 1.4rem;
+  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 700;
   margin-bottom: 10px;
-  padding-bottom: 4px;
-  border-bottom: 2px solid #222222;
+}
+
+p,
+li {
+  font-size: 1rem;
 }
 
 ul {
@@ -68,7 +72,7 @@ li {
 }
 
 a {
-  color: #0056b3;
+  color: #2563eb;
   text-decoration: none;
 }
 
@@ -76,17 +80,51 @@ a:hover {
   text-decoration: underline;
 }
 
-@media print {
+@media (max-width: 600px) {
   body {
-    background-color: white;
+    background-color: #ffffff;
     padding: 0;
   }
 
   .container {
-    width: 210mm;
-    min-height: 297mm;
-    margin: 0;
-    padding: 20mm;
+    min-height: 100vh;
+    padding: 36px 24px;
+    box-shadow: none;
+  }
+
+  header {
+    margin-bottom: 24px;
+  }
+
+  header h1 {
+    font-size: 2.15rem;
+  }
+
+  .section {
+    padding: 20px 0;
+  }
+
+  p,
+  li {
+    font-size: 0.98rem;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm;
+  }
+
+  body {
+    background-color: #ffffff;
+    padding: 0;
+  }
+
+  .container {
+    width: auto;
+    min-height: auto;
+    padding: 0;
     box-shadow: none;
   }
 }
